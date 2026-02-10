@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LipiVoice Pro - AI Transcription Software</title>
+    
+    <title>LipiVoice Pro - Best Offline AI Transcription Software for Windows</title>
+    <meta name="description" content="Download LipiVoice Pro v7.0. The ultimate offline AI transcription tool for Windows. Convert Audio & Video to Text (SRT, VTT, TXT) without internet. No GPU required.">
+    <meta name="keywords" content="AI transcription software, offline speech to text, video to text converter, create subtitles offline, LipiVoice Pro, free transcription tool windows, audio to text ai">
+    <meta name="author" content="Tanveer Ahmed (Mika-AI)">
+    
+    <meta property="og:title" content="LipiVoice Pro - Offline AI Transcription">
+    <meta property="og:description" content="Convert unlimited audio/video to text securely on your PC. No Internet needed.">
+    <meta property="og:image" content="hero-image.png">
+    <meta property="og:url" content="https://trndggamers-ship-it.github.io/LipiVoicePro/">
+
     <style>
         /* --- CSS STYLES --- */
         :root {
@@ -12,9 +22,10 @@
             --dark: #111827;
             --light: #F3F4F6;
             --white: #FFFFFF;
+            --coffee: #FFDD00; /* Buy Me a Coffee Color */
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
         
         body { background-color: var(--white); color: var(--dark); line-height: 1.6; }
 
@@ -26,10 +37,11 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         .logo { font-size: 24px; font-weight: bold; color: var(--primary); display: flex; align-items: center; gap: 10px; }
-        .nav-links a { text-decoration: none; color: var(--dark); margin-left: 30px; font-weight: 500; transition: 0.3s; }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--dark); margin-left: 25px; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary); }
         .btn-download {
-            background: var(--primary); color: white; padding: 10px 25px;
+            background: var(--primary); color: white; padding: 10px 25px; margin-left: 20px;
             border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s;
         }
         .btn-download:hover { background: var(--primary-hover); transform: translateY(-2px); }
@@ -41,11 +53,21 @@
         }
         .hero h1 { font-size: 48px; margin-bottom: 20px; line-height: 1.2; }
         .hero h1 span { color: var(--primary); }
-        .hero p { font-size: 18px; color: #6B7280; max-width: 600px; margin: 0 auto 40px; }
+        .hero p { font-size: 18px; color: #6B7280; max-width: 600px; margin: 0 auto 30px; }
         
+        /* Donation Button Style */
+        .btn-coffee {
+            display: inline-flex; align-items: center; gap: 8px;
+            background-color: var(--coffee); color: #000;
+            padding: 12px 25px; border-radius: 50px; text-decoration: none;
+            font-weight: bold; font-size: 16px; transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 221, 0, 0.4);
+        }
+        .btn-coffee:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255, 221, 0, 0.6); }
+
         /* Software Image Container */
         .image-container {
-            max-width: 1000px; margin: 0 auto;
+            max-width: 1000px; margin: 60px auto 0;
             border-radius: 15px; overflow: hidden;
             box-shadow: 0 20px 50px rgba(79, 70, 229, 0.2);
             border: 8px solid white;
@@ -59,27 +81,46 @@
             100% { transform: translateY(0px); }
         }
 
-        /* Features Grid */
-        .features { padding: 80px 5%; background: var(--white); }
-        .section-title { text-align: center; margin-bottom: 60px; font-size: 32px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        /* Common Section Styles */
+        .section-padding { padding: 80px 5%; }
+        .section-title { text-align: center; margin-bottom: 50px; font-size: 32px; color: var(--dark); }
+        .bg-light { background: #F9FAFB; }
+
+        /* Grid System */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        
+        /* Cards */
         .card {
-            padding: 30px; border-radius: 12px; background: #F9FAFB;
+            padding: 30px; border-radius: 12px; background: var(--white);
             border: 1px solid #E5E7EB; transition: 0.3s;
         }
         .card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .card h3 { margin-bottom: 10px; color: var(--primary); }
+        .card h3 { margin-bottom: 10px; color: var(--primary); font-size: 20px; }
+        .card ul { padding-left: 20px; margin-top: 10px; }
+        .card li { margin-bottom: 8px; color: #4B5563; }
+
+        /* System Requirements Specific */
+        .req-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto; }
+        @media (max-width: 768px) { .req-grid { grid-template-columns: 1fr; } }
+
+        /* FAQ Section */
+        .faq-item {
+            max-width: 800px; margin: 0 auto 20px;
+            background: var(--white); padding: 20px; border-radius: 10px;
+            border: 1px solid #E5E7EB;
+        }
+        .faq-question { font-weight: bold; font-size: 18px; margin-bottom: 10px; color: var(--primary); }
+        .faq-answer { color: #4B5563; }
 
         /* Footer */
-        footer { background: var(--dark); color: white; text-align: center; padding: 40px; margin-top: 50px; }
-        footer p { opacity: 0.7; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 50px 20px; margin-top: 50px; }
         footer a { color: #EEF2FF; text-decoration: none; font-weight: bold; }
-        footer a:hover { text-decoration: underline; }
+        footer a:hover { text-decoration: underline; color: var(--coffee); }
 
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 { font-size: 32px; }
-            .nav-links { display: none; } 
+            .nav-links { display: none; } /* Mobile menu hidden */
         }
     </style>
 </head>
@@ -95,26 +136,31 @@
         </div>
         <div class="nav-links">
             <a href="#features">Features</a>
-            <a href="https://trndggamers-ship-it.github.io/Mika-AI/" target="_blank">Contact Support</a>
+            <a href="#requirements">Requirements</a>
+            <a href="#faq">FAQ</a>
+            <a href="https://trndggamers-ship-it.github.io/Mika-AI/" target="_blank">Contact</a>
+            <a href="#" class="btn-download">Download v7.0</a>
         </div>
-        <a href="#" class="btn-download">Download v7.0</a>
     </nav>
 
     <section class="hero">
         <h1>Offline AI Transcription <br><span>Made Simple & Secure.</span></h1>
         <p>Convert Audio & Video to Text instantly without internet. Unlimited Batch Processing, 99% Accuracy, and complete Privacy.</p>
         
-        <div style="margin-bottom: 50px;">
-            <a href="#" class="btn-download" style="padding: 15px 40px; font-size: 18px;">Get LipiVoice Pro</a>
-            <p style="margin-top: 10px; font-size: 14px; opacity: 0.8;">Windows 10/11 Compatible • No GPU Required</p>
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+            <a href="#" class="btn-download" style="margin:0; padding: 15px 40px; font-size: 18px;">Get LipiVoice Pro</a>
+            <a href="https://buymeacoffee.com/mika_ai" target="_blank" class="btn-coffee">
+                ☕ Support Dev
+            </a>
         </div>
+        <p style="margin-top: 15px; font-size: 14px; opacity: 0.8;">Windows 10/11 Compatible • No GPU Required</p>
 
         <div class="image-container">
-            <img src="hero-image.png" alt="LipiVoice Pro Software Interface">
+            <img src="hero-image.png" alt="LipiVoice Pro Software Interface Screenshot">
         </div>
     </section>
 
-    <section id="features" class="features">
+    <section id="features" class="section-padding">
         <h2 class="section-title">Why Choose LipiVoice Pro?</h2>
         <div class="grid">
             <div class="card">
@@ -127,7 +173,7 @@
             </div>
             <div class="card">
                 <h3>💻 CPU Optimized</h3>
-                <p>Don't have a GPU? No problem. Our smart engine runs smoothly on standard CPUs.</p>
+                <p>No expensive GPU needed. Our smart engine is optimized to run smoothly on standard Intel/AMD CPUs.</p>
             </div>
             <div class="card">
                 <h3>📝 Multi-Format</h3>
@@ -136,10 +182,69 @@
         </div>
     </section>
 
+    <section id="requirements" class="section-padding bg-light">
+        <h2 class="section-title">System Requirements</h2>
+        <div class="req-grid">
+            <div class="card">
+                <h3>Minimum Requirements</h3>
+                <ul>
+                    <li><b>OS:</b> Windows 10 or Windows 11 (64-bit)</li>
+                    <li><b>Processor:</b> Intel Core i3 (8th Gen) or AMD Ryzen 3</li>
+                    <li><b>RAM:</b> 8 GB</li>
+                    <li><b>Storage:</b> 4 GB Free Space</li>
+                    <li><b>Graphics:</b> Not Required (CPU Mode)</li>
+                </ul>
+            </div>
+            <div class="card" style="border-color: var(--primary);">
+                <h3>Recommended Specs</h3>
+                <ul>
+                    <li><b>OS:</b> Windows 10/11 (64-bit)</li>
+                    <li><b>Processor:</b> Intel Core i5 / Ryzen 5 or better</li>
+                    <li><b>RAM:</b> 16 GB (For faster processing)</li>
+                    <li><b>Storage:</b> SSD Recommended</li>
+                    <li><b>Graphics:</b> NVIDIA GPU (Optional for speed)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section-padding">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">Does this software require an internet connection?</div>
+            <div class="faq-answer">No. LipiVoice Pro is 100% offline. You can transcribe sensitive files without uploading them to the cloud.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Do I need a Graphics Card (GPU) to run this?</div>
+            <div class="faq-answer">No. While a GPU can make it faster, LipiVoice Pro is specially optimized to run efficiently on your computer's CPU.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Is it free to use?</div>
+            <div class="faq-answer">Yes, the core features are free. If you like the project, you can <a href="https://buymeacoffee.com/mika_ai" target="_blank" style="color:var(--primary);">Buy me a coffee</a> to support future updates.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What file formats are supported?</div>
+            <div class="faq-answer">It supports almost all audio and video formats including MP3, WAV, MP4, MKV, AVI, and MOV.</div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2026 LipiVoice Pro. All rights reserved.</p>
+        <h2>LipiVoice Pro</h2>
+        <p style="margin-bottom: 20px;">Empowering creators with offline AI tools.</p>
+        
+        <div style="margin-bottom: 30px;">
+             <a href="https://buymeacoffee.com/mika_ai" target="_blank" class="btn-coffee" style="font-size: 14px; padding: 8px 20px;">
+                ☕ Donate & Support
+            </a>
+        </div>
+
+        <p>&copy; 2026 Tanveer Ahmed (Mika-AI). All rights reserved.</p>
         <p style="font-size: 14px; margin-top: 10px;">
-            Need Help? <a href="https://trndggamers-ship-it.github.io/Mika-AI/" target="_blank">Chat with us at Mika-AI</a>
+            Need technical help? <a href="https://trndggamers-ship-it.github.io/Mika-AI/" target="_blank">Chat with me directly</a>
         </p>
     </footer>
 
