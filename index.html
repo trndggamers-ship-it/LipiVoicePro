@@ -6,8 +6,13 @@
     
     <title>LipiVoice Pro - Best Offline AI Transcription Software</title>
     <meta name="description" content="Download LipiVoice Pro v7.0. The ultimate offline AI transcription tool for Windows created by Kazi Abir. No GPU required.">
+    <meta name="keywords" content="AI transcription, offline speech to text, video to text, LipiVoice Pro, Kazi Abir, free transcription tool">
     <meta name="author" content="Kazi Abir (Mika-AI)">
     
+    <meta property="og:title" content="LipiVoice Pro - Offline AI Transcription">
+    <meta property="og:description" content="Convert unlimited audio/video to text securely on your PC. No Internet needed.">
+    <meta property="og:image" content="hero-image.png">
+
     <style>
         /* --- CSS STYLES --- */
         :root {
@@ -79,14 +84,30 @@
             0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); }
         }
 
-        /* Sections */
+        /* Common Section Styles */
         .section-padding { padding: 80px 5%; }
         .section-title { text-align: center; margin-bottom: 50px; font-size: 32px; color: var(--dark); }
         .bg-light { background: #F9FAFB; }
+
+        /* Grid System */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .req-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto; }
+        
+        /* Cards */
         .card { padding: 30px; border-radius: 12px; background: var(--white); border: 1px solid #E5E7EB; transition: 0.3s; }
         .card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         .card h3 { margin-bottom: 10px; color: var(--primary); font-size: 20px; }
+        .card ul { padding-left: 20px; margin-top: 10px; }
+        .card li { margin-bottom: 8px; color: #4B5563; }
+
+        /* FAQ Section */
+        .faq-item {
+            max-width: 800px; margin: 0 auto 20px;
+            background: var(--white); padding: 20px; border-radius: 10px;
+            border: 1px solid #E5E7EB;
+        }
+        .faq-question { font-weight: bold; font-size: 18px; margin-bottom: 10px; color: var(--primary); }
+        .faq-answer { color: #4B5563; }
 
         /* Footer */
         footer { background: var(--dark); color: white; text-align: center; padding: 50px 20px; margin-top: 50px; }
@@ -94,7 +115,11 @@
         footer a:hover { text-decoration: underline; color: var(--coffee); }
         .footer-links { margin-top: 20px; border-top: 1px solid #374151; padding-top: 20px; }
 
-        @media (max-width: 768px) { .hero h1 { font-size: 32px; } .nav-links { display: none; } }
+        @media (max-width: 768px) { 
+            .hero h1 { font-size: 32px; } 
+            .nav-links { display: none; } 
+            .req-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -110,6 +135,7 @@
         <div class="nav-links">
             <a href="#features">Features</a>
             <a href="#requirements">Requirements</a>
+            <a href="#faq">FAQ</a>
             <a href="https://trndggamers-ship-it.github.io/Mika-AI/" target="_blank">Contact</a>
             <a href="#" class="btn-download">Download v7.0</a>
         </div>
@@ -152,6 +178,55 @@
                 <h3>💻 CPU Optimized</h3>
                 <p>No expensive GPU needed. Our smart engine is optimized to run smoothly on standard Intel/AMD CPUs.</p>
             </div>
+            <div class="card">
+                <h3>📝 Multi-Format</h3>
+                <p>Export your transcripts to TXT, SRT (Subtitles), VTT, or JSON with a single click.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="requirements" class="section-padding bg-light">
+        <h2 class="section-title">System Requirements</h2>
+        <div class="req-grid">
+            <div class="card">
+                <h3>Minimum Requirements</h3>
+                <ul>
+                    <li><b>OS:</b> Windows 10 or Windows 11 (64-bit)</li>
+                    <li><b>Processor:</b> Intel Core i3 (8th Gen) or AMD Ryzen 3</li>
+                    <li><b>RAM:</b> 8 GB</li>
+                    <li><b>Storage:</b> 4 GB Free Space</li>
+                    <li><b>Graphics:</b> Not Required (CPU Mode)</li>
+                </ul>
+            </div>
+            <div class="card" style="border-color: var(--primary);">
+                <h3>Recommended Specs</h3>
+                <ul>
+                    <li><b>OS:</b> Windows 10/11 (64-bit)</li>
+                    <li><b>Processor:</b> Intel Core i5 / Ryzen 5 or better</li>
+                    <li><b>RAM:</b> 16 GB (For faster processing)</li>
+                    <li><b>Storage:</b> SSD Recommended</li>
+                    <li><b>Graphics:</b> NVIDIA GPU (Optional for speed)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section-padding">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">Does this software require an internet connection?</div>
+            <div class="faq-answer">No. LipiVoice Pro is 100% offline. You can transcribe sensitive files securely.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Do I need a Graphics Card (GPU)?</div>
+            <div class="faq-answer">No. LipiVoice Pro is highly optimized for standard CPUs. A GPU is optional.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Is it free to use?</div>
+            <div class="faq-answer">Yes, the core features are free. You can <a href="https://buymeacoffee.com/mika_ai" target="_blank" style="color:var(--primary);">Buy me a coffee</a> to support development.</div>
         </div>
     </section>
 
