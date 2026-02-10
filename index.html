@@ -17,14 +17,14 @@
         /* --- CSS STYLES --- */
         :root {
             --primary: #4F46E5;
-            --primary-hover: #4338CA;
-            --dark: #111827;
-            --light: #F3F4F6;
+            --primary-dark: #4338CA;
+            --secondary: #10B981; /* Success Green */
+            --dark: #1F2937;
+            --gray: #6B7280;
+            --light: #F9FAFB;
             --white: #FFFFFF;
             --coffee: #FFDD00;
             --coffee-hover: #E6C200;
-            --warning-bg: #FFFBEB;
-            --warning-text: #92400E;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
@@ -35,35 +35,33 @@
             display: flex; justify-content: space-between; align-items: center;
             padding: 15px 5%; background: rgba(255, 255, 255, 0.98);
             position: fixed; width: 100%; top: 0; z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
         
-        /* 🔴 LOGO STYLES UPDATED */
+        /* LOGO */
         .logo { 
             font-size: 24px; font-weight: bold; color: var(--primary); 
             display: flex; align-items: center; gap: 10px; 
         }
-        .logo img {
-            height: 40px; /* লোগোর সাইজ এখান থেকে কন্ট্রোল করবেন */
-            width: auto;
-        }
+        .logo img { height: 40px; width: auto; }
 
         .nav-links a { text-decoration: none; color: var(--dark); margin-left: 25px; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary); }
         .btn-download {
             background: var(--primary); color: white; padding: 10px 25px; margin-left: 20px;
             border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
         }
-        .btn-download:hover { background: var(--primary-hover); transform: translateY(-2px); }
+        .btn-download:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 6px 10px rgba(79, 70, 229, 0.3); }
 
         /* Hero Section */
         .hero {
             text-align: center; padding: 160px 20px 80px;
-            background: linear-gradient(180deg, #EEF2FF 0%, #FFFFFF 100%);
+            background: radial-gradient(circle at top, #EEF2FF 0%, #FFFFFF 70%);
         }
-        .hero h1 { font-size: 48px; margin-bottom: 20px; line-height: 1.2; }
-        .hero h1 span { color: var(--primary); }
-        .hero p { font-size: 18px; color: #6B7280; max-width: 600px; margin: 0 auto 30px; }
+        .hero h1 { font-size: 52px; margin-bottom: 20px; line-height: 1.1; letter-spacing: -1px; }
+        .hero h1 span { color: var(--primary); background: -webkit-linear-gradient(45deg, #4F46E5, #9333EA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 18px; color: var(--gray); max-width: 650px; margin: 0 auto 35px; }
         
         /* Coffee Button */
         .btn-coffee {
@@ -73,72 +71,94 @@
             font-weight: bold; font-size: 16px; transition: 0.3s;
             box-shadow: 0 4px 15px rgba(255, 221, 0, 0.4);
         }
-        .btn-coffee:hover { 
-            background-color: var(--coffee-hover); 
-            transform: translateY(-3px); 
-            box-shadow: 0 6px 20px rgba(255, 221, 0, 0.6); 
-        }
+        .btn-coffee:hover { background-color: var(--coffee-hover); transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255, 221, 0, 0.6); }
 
         /* Installation Warning */
         .install-note {
-            background: var(--warning-bg); border: 1px solid #FCD34D; color: var(--warning-text);
-            max-width: 600px; margin: 30px auto 0; padding: 15px; border-radius: 8px;
-            font-size: 14px; text-align: left; display: flex; gap: 10px; align-items: start;
+            background: #FEF3C7; border-left: 4px solid #F59E0B; color: #92400E;
+            max-width: 600px; margin: 30px auto 0; padding: 15px; border-radius: 4px;
+            font-size: 14px; text-align: left; display: flex; gap: 15px; align-items: center;
         }
 
         /* Image */
         .image-container {
             max-width: 1000px; margin: 60px auto 0;
-            border-radius: 15px; overflow: hidden;
-            box-shadow: 0 20px 50px rgba(79, 70, 229, 0.2);
+            border-radius: 20px; overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
             border: 8px solid white;
             animation: float 6s ease-in-out infinite;
         }
         .image-container img { width: 100%; display: block; }
-        @keyframes float {
-            0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); }
-        }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
 
-        /* Common Section Styles */
+        /* Sections */
         .section-padding { padding: 80px 5%; }
-        .section-title { text-align: center; margin-bottom: 50px; font-size: 32px; color: var(--dark); }
-        .bg-light { background: #F9FAFB; }
+        .section-title { text-align: center; margin-bottom: 60px; font-size: 36px; font-weight: 800; color: var(--dark); }
+        .bg-light { background: var(--light); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .req-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto; }
         
-        /* Cards */
-        .card { padding: 30px; border-radius: 12px; background: var(--white); border: 1px solid #E5E7EB; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .card h3 { margin-bottom: 10px; color: var(--primary); font-size: 20px; }
+        /* Feature Cards */
+        .card { padding: 35px; border-radius: 16px; background: var(--white); border: 1px solid #E5E7EB; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+        .card h3 { margin-bottom: 15px; color: var(--dark); font-size: 22px; }
+        .card p { color: var(--gray); }
 
-        /* Pricing Card */
+        /* 💎 PREMIUM PRICING SECTION STYLES */
+        .pricing-container {
+            max-width: 1000px; margin: 0 auto;
+            display: flex; justify-content: center;
+        }
         .pricing-card {
-            max-width: 450px; margin: 0 auto; text-align: center; border: 2px solid var(--primary);
-            position: relative; overflow: hidden;
+            background: white; width: 100%; max-width: 500px;
+            border-radius: 24px; padding: 50px 40px; text-align: center;
+            box-shadow: 0 20px 60px -10px rgba(79, 70, 229, 0.15);
+            border: 2px solid var(--primary); position: relative;
+            transition: 0.3s;
         }
-        .badge {
-            background: var(--primary); color: white; padding: 5px 15px;
-            font-size: 12px; font-weight: bold; border-radius: 20px;
-            position: absolute; top: 20px; right: 20px;
+        .pricing-card:hover { transform: translateY(-10px); box-shadow: 0 30px 70px -10px rgba(79, 70, 229, 0.25); }
+        
+        /* Popular Badge */
+        .popular-badge {
+            background: var(--primary); color: white; position: absolute; top: 0; left: 50%;
+            transform: translate(-50%, -50%); padding: 8px 25px; border-radius: 30px;
+            font-weight: bold; font-size: 14px; letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
         }
-        .price { font-size: 48px; font-weight: bold; color: var(--dark); margin: 20px 0; }
-        .price span { font-size: 16px; color: #6B7280; font-weight: normal; }
-        .check-list { list-style: none; text-align: left; margin: 30px 0; padding: 0 20px; }
-        .check-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-size: 16px; }
-        .check-list svg { color: var(--primary); min-width: 20px; }
+        
+        .price-area { margin: 30px 0; }
+        .old-price { font-size: 20px; text-decoration: line-through; color: #9CA3AF; margin-right: 10px; }
+        .new-price { font-size: 56px; font-weight: 800; color: var(--dark); }
+        .new-price span { font-size: 18px; font-weight: normal; color: var(--gray); }
+        
+        .feature-list { list-style: none; margin: 30px 0; text-align: left; padding: 0 20px; }
+        .feature-list li { margin-bottom: 18px; display: flex; align-items: center; gap: 12px; font-size: 17px; color: #374151; }
+        .feature-list svg { color: var(--secondary); min-width: 24px; }
+        
+        .btn-buy {
+            display: block; width: 100%; background: var(--primary); color: white;
+            padding: 18px; border-radius: 12px; font-size: 18px; font-weight: bold;
+            text-decoration: none; transition: 0.3s;
+        }
+        .btn-buy:hover { background: var(--primary-dark); transform: scale(1.02); }
+        .guarantee { margin-top: 20px; font-size: 13px; color: var(--gray); display: flex; align-items: center; justify-content: center; gap: 5px; }
 
-        /* FAQ & Footer */
-        .faq-item { max-width: 800px; margin: 0 auto 20px; background: var(--white); padding: 20px; border-radius: 10px; border: 1px solid #E5E7EB; }
-        .faq-question { font-weight: bold; font-size: 18px; margin-bottom: 10px; color: var(--primary); }
-        footer { background: var(--dark); color: white; text-align: center; padding: 50px 20px; margin-top: 50px; }
-        footer a { color: #EEF2FF; text-decoration: none; margin: 0 10px; font-size: 14px; }
-        footer a:hover { text-decoration: underline; color: var(--coffee); }
-        .footer-links { margin-top: 20px; border-top: 1px solid #374151; padding-top: 20px; }
+        /* System Requirements & FAQ */
+        .req-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto; }
+        .faq-item { max-width: 800px; margin: 0 auto 20px; background: var(--white); padding: 25px; border-radius: 12px; border: 1px solid #E5E7EB; }
+        .faq-question { font-weight: bold; font-size: 18px; margin-bottom: 8px; color: var(--dark); }
+
+        /* Footer */
+        footer { background: var(--dark); color: white; text-align: center; padding: 60px 20px; margin-top: 80px; }
+        footer h2 { margin-bottom: 10px; }
+        footer a { color: #D1D5DB; text-decoration: none; font-size: 14px; margin: 0 12px; transition: 0.3s; }
+        footer a:hover { color: var(--white); text-decoration: underline; }
+        .footer-links { margin-top: 30px; border-top: 1px solid #374151; padding-top: 30px; }
 
         @media (max-width: 768px) { 
-            .hero h1 { font-size: 32px; } 
+            .hero h1 { font-size: 36px; } 
             .nav-links { display: none; } 
             .req-grid { grid-template-columns: 1fr; }
+            .pricing-card { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -154,43 +174,42 @@
             <a href="#pricing">Pricing</a>
             <a href="#requirements">Requirements</a>
             <a href="https://trndggamers-ship-it.github.io/Mika-AI/" target="_blank">Contact</a>
-            
             <a href="https://zerixastudio.gumroad.com/l/eyrsp" class="btn-download" target="_blank">Download v7.0</a>
         </div>
     </nav>
 
     <section class="hero">
-        <h1>Offline AI Transcription <br><span>Made Simple & Secure.</span></h1>
-        <p>Convert Audio & Video to Text instantly without internet. Unlimited Batch Processing, 99% Accuracy, and complete Privacy.</p>
+        <h1>Offline AI Transcription <br><span>Secure. Fast. Unlimited.</span></h1>
+        <p>Convert Audio & Video to Text instantly without internet. Privacy-first AI transcription for creators, journalists, and researchers.</p>
         
         <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-            <a href="https://zerixastudio.gumroad.com/l/eyrsp" class="btn-download" style="margin:0; padding: 15px 40px; font-size: 18px;" target="_blank">Get LipiVoice Pro ($19)</a>
+            <a href="https://zerixastudio.gumroad.com/l/eyrsp" class="btn-download" style="margin:0; padding: 15px 40px; font-size: 18px;" target="_blank">Get Started - $19</a>
             <a href="https://buymeacoffee.com/mika_ai" target="_blank" class="btn-coffee">☕ Support Dev</a>
         </div>
 
         <div class="install-note">
-            <span style="font-size: 24px;">⚠️</span>
+            <span style="font-size: 20px;">🛡️</span>
             <div>
-                <strong>Installation Note:</strong> Windows SmartScreen might flag the setup file as "Unrecognized". 
+                <strong>Installation Note:</strong> Windows SmartScreen might flag the setup file as "Unrecognized" (Common for indie apps). 
                 <br>Click <b>"More Info"</b> > <b>"Run Anyway"</b> to install. It is 100% safe.
             </div>
         </div>
 
         <div class="image-container">
-            <img src="hero-image.png" alt="LipiVoice Pro Software Interface Screenshot">
+            <img src="hero-image.png" alt="LipiVoice Pro Interface">
         </div>
     </section>
 
     <section id="features" class="section-padding">
-        <h2 class="section-title">Why Choose LipiVoice Pro?</h2>
+        <h2 class="section-title">Why LipiVoice Pro?</h2>
         <div class="grid">
             <div class="card">
                 <h3>🚀 Unlimited Batch</h3>
-                <p>Drag and drop hundreds of files at once. The software processes them one by one automatically.</p>
+                <p>Drag and drop hundreds of files at once. The software processes them one by one automatically while you sleep.</p>
             </div>
             <div class="card">
                 <h3>🔒 100% Offline</h3>
-                <p>Your data never leaves your PC. We use an embedded AI engine that works without internet.</p>
+                <p>Your data never leaves your PC. We use an embedded AI engine that works without internet connection.</p>
             </div>
             <div class="card">
                 <h3>💻 CPU Optimized</h3>
@@ -204,23 +223,51 @@
     </section>
 
     <section id="pricing" class="section-padding bg-light">
-        <h2 class="section-title">Simple, Transparent Pricing</h2>
-        <div class="card pricing-card">
-            <span class="badge">LIFETIME DEAL</span>
-            <h3>LipiVoice Pro License</h3>
-            <p>Pay once, use forever. No monthly fees.</p>
-            <div class="price">$19 <span>/ one-time</span></div>
-            
-            <ul class="check-list">
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Unlimited Batch Transcription</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 100% Offline & Private</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> SRT, VTT, JSON Exports</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Commercial Use Allowed</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Free Lifetime Updates</li>
-            </ul>
+        <h2 class="section-title">Simple Pricing, Lifetime Value</h2>
+        
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <div class="popular-badge">LIFETIME DEAL 🔥</div>
+                
+                <h3 style="margin-top: 10px; font-size: 28px;">Lifetime License</h3>
+                <p style="color: #6B7280; margin-top: 5px;">One-time payment. Use forever.</p>
+                
+                <div class="price-area">
+                    <span class="old-price">$49</span>
+                    <span class="new-price">$19</span>
+                    <span>USD</span>
+                </div>
 
-            <a href="https://zerixastudio.gumroad.com/l/eyrsp" target="_blank" class="btn-download" style="margin: 0; display: block; text-align: center;">Get Lifetime Access</a>
-            <p style="margin-top: 15px; font-size: 12px; color: #6B7280;">30-day money-back guarantee.</p>
+                <ul class="feature-list">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Unlimited Audio/Video Transcription
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        100% Offline (Privacy Focused)
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Exports: SRT, VTT, JSON, TXT
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Commercial Use License
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Free Future Updates
+                    </li>
+                </ul>
+
+                <a href="https://zerixastudio.gumroad.com/l/eyrsp" target="_blank" class="btn-buy">Get Access Now</a>
+                
+                <div class="guarantee">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    30-day money-back guarantee
+                </div>
+            </div>
         </div>
     </section>
 
@@ -229,19 +276,19 @@
         <div class="req-grid">
             <div class="card">
                 <h3>Minimum Requirements</h3>
-                <ul>
-                    <li><b>OS:</b> Windows 10 or Windows 11 (64-bit)</li>
-                    <li><b>Processor:</b> Intel Core i3 (8th Gen) or AMD Ryzen 3</li>
+                <ul style="padding-left: 20px; margin-top: 15px;">
+                    <li><b>OS:</b> Windows 10 or 11 (64-bit)</li>
+                    <li><b>Processor:</b> Intel Core i3 / AMD Ryzen 3</li>
                     <li><b>RAM:</b> 8 GB</li>
                     <li><b>Storage:</b> 4 GB Free Space</li>
                 </ul>
             </div>
             <div class="card" style="border-color: var(--primary);">
                 <h3>Recommended Specs</h3>
-                <ul>
-                    <li><b>OS:</b> Windows 10/11 (64-bit)</li>
+                <ul style="padding-left: 20px; margin-top: 15px;">
+                    <li><b>OS:</b> Windows 10 or 11 (64-bit)</li>
                     <li><b>Processor:</b> Intel Core i5 / Ryzen 5 or better</li>
-                    <li><b>RAM:</b> 16 GB (For faster processing)</li>
+                    <li><b>RAM:</b> 16 GB (Faster processing)</li>
                     <li><b>Storage:</b> SSD Recommended</li>
                 </ul>
             </div>
@@ -252,22 +299,22 @@
         <h2 class="section-title">Frequently Asked Questions</h2>
         
         <div class="faq-item">
-            <div class="faq-question">Does this software require an internet connection?</div>
-            <div class="faq-answer">No. LipiVoice Pro is 100% offline. You can transcribe sensitive files securely.</div>
+            <div class="faq-question">Does this software require internet?</div>
+            <div class="faq-answer">No. LipiVoice Pro is 100% offline. All processing happens locally on your computer.</div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">Do I need a Graphics Card (GPU)?</div>
-            <div class="faq-answer">No. LipiVoice Pro is highly optimized for standard CPUs. A GPU is optional.</div>
+            <div class="faq-question">Do I need a powerful GPU?</div>
+            <div class="faq-answer">No. While a GPU makes it faster, our software is specially optimized to run smoothly on standard CPUs.</div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">How do I get updates?</div>
-            <div class="faq-answer">Since you purchased a lifetime deal via Gumroad, you will get free updates forever via email notification.</div>
+            <div class="faq-question">Is it a monthly subscription?</div>
+            <div class="faq-answer">No! You pay once ($19) and own it forever. No hidden fees.</div>
         </div>
     </section>
 
     <footer>
         <h2>LipiVoice Pro</h2>
-        <p>Empowering creators with offline AI tools.</p>
+        <p>Built with ❤️ by Mika-AI (Kazi Abir)</p>
         
         <div style="margin: 30px 0;">
              <a href="https://buymeacoffee.com/mika_ai" target="_blank" class="btn-coffee">
@@ -275,7 +322,7 @@
             </a>
         </div>
 
-        <p>&copy; 2026 Kazi Abir (Mika-AI). All rights reserved.</p>
+        <p>&copy; 2026 Kazi Abir. All rights reserved.</p>
         
         <div class="footer-links">
             <a href="privacy.html">Privacy Policy</a> |
