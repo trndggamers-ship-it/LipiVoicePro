@@ -1,24 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SXF0L34M1V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SXF0L34M1V');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>LipiVoice Pro - Best Offline AI Transcription Software</title>
-    <meta name="description" content="Download LipiVoice Pro v7.0. The ultimate offline AI transcription tool for Windows created by Kazi Abir. Lifetime Deal available.">
-    <meta name="keywords" content="AI transcription, offline speech to text, video to text, LipiVoice Pro, Kazi Abir, Gumroad, Lifetime Deal">
-    <meta name="author" content="Kazi Abir (Mika-AI)">
+    <title>LipiVoice Pro - Best Offline AI Transcription Software for Windows</title>
     
-    <meta property="og:title" content="LipiVoice Pro - Offline AI Transcription">
-    <meta property="og:description" content="Convert unlimited audio/video to text securely on your PC. No Internet needed.">
-    <meta property="og:image" content="hero-image.png">
+    <meta name="description" content="Download LipiVoice Pro v7.0. The ultimate offline AI transcription software for Windows. Convert audio & video to text securely without internet. No GPU required. 99% Accuracy.">
+    
+    <meta name="keywords" content="LipiVoice Pro, offline transcription software, AI speech to text, video to text converter, Kazi Abir, Windows transcription tool, secure transcription, OpenAI Whisper offline, automated subtitles generator">
+    
+    <meta name="author" content="Kazi Abir (Mika-AI)">
+    <meta name="robots" content="index, follow"> <link rel="canonical" href="https://trndggamers-ship-it.github.io/LipiVoicePro/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LipiVoice Pro - Unlimited Offline AI Transcription">
+    <meta property="og:description" content="Convert unlimited audio/video to text securely on your PC. No Internet needed. One-time payment.">
+    <meta property="og:image" content="https://trndggamers-ship-it.github.io/LipiVoicePro/hero-image.png">
+    <meta property="og:url" content="https://trndggamers-ship-it.github.io/LipiVoicePro/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LipiVoice Pro - Secure Offline Transcription">
+    <meta name="twitter:description" content="Stop paying monthly fees. Get lifetime access to offline AI transcription.">
+    <meta name="twitter:image" content="https://trndggamers-ship-it.github.io/LipiVoicePro/hero-image.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "LipiVoice Pro",
+      "operatingSystem": "Windows 10, Windows 11",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "19.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "120"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Kazi Abir"
+      }
+    }
+    </script>
 
     <style>
-        /* --- CSS STYLES --- */
         :root {
             --primary: #4F46E5;
             --primary-dark: #4338CA;
-            --secondary: #10B981; /* Success Green */
+            --secondary: #10B981;
             --dark: #1F2937;
             --gray: #6B7280;
             --light: #F9FAFB;
@@ -27,7 +71,7 @@
             --coffee-hover: #E6C200;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; scroll-behavior: smooth; }
         body { background-color: var(--white); color: var(--dark); line-height: 1.6; }
 
         /* Navbar */
@@ -36,53 +80,58 @@
             padding: 15px 5%; background: rgba(255, 255, 255, 0.98);
             position: fixed; width: 100%; top: 0; z-index: 1000;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(10px);
         }
         
         /* LOGO */
         .logo { 
-            font-size: 24px; font-weight: bold; color: var(--primary); 
-            display: flex; align-items: center; gap: 10px; 
+            font-size: 24px; font-weight: 800; color: var(--primary); 
+            display: flex; align-items: center; gap: 10px; text-decoration: none;
         }
-        .logo img { height: 40px; width: auto; }
+        .logo img { height: 35px; width: auto; }
 
-        .nav-links a { text-decoration: none; color: var(--dark); margin-left: 25px; font-weight: 500; transition: 0.3s; }
+        .nav-links a { text-decoration: none; color: var(--dark); margin-left: 25px; font-weight: 600; transition: 0.3s; font-size: 15px; }
         .nav-links a:hover { color: var(--primary); }
         .btn-download {
-            background: var(--primary); color: white; padding: 10px 25px; margin-left: 20px;
-            border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s;
-            box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+            background: var(--primary); color: white; padding: 10px 24px; margin-left: 20px;
+            border-radius: 8px; text-decoration: none; font-weight: 700; transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(79, 70, 229, 0.25);
         }
-        .btn-download:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 6px 10px rgba(79, 70, 229, 0.3); }
+        .btn-download:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 15px rgba(79, 70, 229, 0.3); }
 
         /* Hero Section */
         .hero {
             text-align: center; padding: 160px 20px 80px;
-            background: radial-gradient(circle at top, #EEF2FF 0%, #FFFFFF 70%);
+            background: radial-gradient(circle at top center, #EEF2FF 0%, #FFFFFF 60%);
         }
-        .hero h1 { font-size: 52px; margin-bottom: 20px; line-height: 1.1; letter-spacing: -1px; }
-        .hero h1 span { color: var(--primary); background: -webkit-linear-gradient(45deg, #4F46E5, #9333EA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero p { font-size: 18px; color: var(--gray); max-width: 650px; margin: 0 auto 35px; }
+        .hero h1 { font-size: 56px; margin-bottom: 24px; line-height: 1.1; letter-spacing: -1px; font-weight: 800; }
+        .hero h1 span { 
+            background: linear-gradient(135deg, #4F46E5 0%, #9333EA 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .hero p { font-size: 20px; color: var(--gray); max-width: 650px; margin: 0 auto 40px; }
         
         /* Coffee Button */
         .btn-coffee {
             display: inline-flex; align-items: center; gap: 8px;
             background-color: var(--coffee); color: #000 !important;
-            padding: 12px 25px; border-radius: 50px; text-decoration: none;
-            font-weight: bold; font-size: 16px; transition: 0.3s;
+            padding: 12px 28px; border-radius: 50px; text-decoration: none;
+            font-weight: 700; font-size: 16px; transition: 0.3s;
             box-shadow: 0 4px 15px rgba(255, 221, 0, 0.4);
         }
-        .btn-coffee:hover { background-color: var(--coffee-hover); transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255, 221, 0, 0.6); }
+        .btn-coffee:hover { background-color: var(--coffee-hover); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(255, 221, 0, 0.5); }
 
         /* Installation Warning */
         .install-note {
-            background: #FEF3C7; border-left: 4px solid #F59E0B; color: #92400E;
-            max-width: 600px; margin: 30px auto 0; padding: 15px; border-radius: 4px;
-            font-size: 14px; text-align: left; display: flex; gap: 15px; align-items: center;
+            background: #FFFBEB; border-left: 4px solid #F59E0B; color: #92400E;
+            max-width: 600px; margin: 40px auto 0; padding: 16px 20px; border-radius: 6px;
+            font-size: 15px; text-align: left; display: flex; gap: 15px; align-items: flex-start;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         /* Image */
         .image-container {
-            max-width: 1000px; margin: 60px auto 0;
+            max-width: 1000px; margin: 70px auto 0;
             border-radius: 20px; overflow: hidden;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
             border: 8px solid white;
@@ -92,22 +141,19 @@
         @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
 
         /* Sections */
-        .section-padding { padding: 80px 5%; }
-        .section-title { text-align: center; margin-bottom: 60px; font-size: 36px; font-weight: 800; color: var(--dark); }
+        .section-padding { padding: 100px 5%; }
+        .section-title { text-align: center; margin-bottom: 60px; font-size: 36px; font-weight: 800; color: var(--dark); letter-spacing: -0.5px; }
         .bg-light { background: var(--light); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
         
         /* Feature Cards */
-        .card { padding: 35px; border-radius: 16px; background: var(--white); border: 1px solid #E5E7EB; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
-        .card h3 { margin-bottom: 15px; color: var(--dark); font-size: 22px; }
-        .card p { color: var(--gray); }
+        .card { padding: 40px; border-radius: 16px; background: var(--white); border: 1px solid #E5E7EB; transition: 0.3s; }
+        .card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1); }
+        .card h3 { margin-bottom: 15px; color: var(--dark); font-size: 22px; font-weight: 700; }
+        .card p { color: var(--gray); font-size: 16px; line-height: 1.7; }
 
-        /* 💎 PREMIUM PRICING SECTION STYLES */
-        .pricing-container {
-            max-width: 1000px; margin: 0 auto;
-            display: flex; justify-content: center;
-        }
+        /* 💎 PREMIUM PRICING CARD */
+        .pricing-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: center; }
         .pricing-card {
             background: white; width: 100%; max-width: 500px;
             border-radius: 24px; padding: 50px 40px; text-align: center;
@@ -115,64 +161,60 @@
             border: 2px solid var(--primary); position: relative;
             transition: 0.3s;
         }
-        .pricing-card:hover { transform: translateY(-10px); box-shadow: 0 30px 70px -10px rgba(79, 70, 229, 0.25); }
+        .pricing-card:hover { transform: translateY(-10px); box-shadow: 0 30px 80px -12px rgba(79, 70, 229, 0.25); }
         
-        /* Popular Badge */
         .popular-badge {
             background: var(--primary); color: white; position: absolute; top: 0; left: 50%;
             transform: translate(-50%, -50%); padding: 8px 25px; border-radius: 30px;
-            font-weight: bold; font-size: 14px; letter-spacing: 1px;
+            font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase;
             box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
         }
         
-        .price-area { margin: 30px 0; }
-        .old-price { font-size: 20px; text-decoration: line-through; color: #9CA3AF; margin-right: 10px; }
-        .new-price { font-size: 56px; font-weight: 800; color: var(--dark); }
-        .new-price span { font-size: 18px; font-weight: normal; color: var(--gray); }
+        .price-area { margin: 30px 0; display: flex; align-items: baseline; justify-content: center; gap: 10px; }
+        .old-price { font-size: 20px; text-decoration: line-through; color: #9CA3AF; }
+        .new-price { font-size: 64px; font-weight: 800; color: var(--dark); line-height: 1; }
         
-        .feature-list { list-style: none; margin: 30px 0; text-align: left; padding: 0 20px; }
-        .feature-list li { margin-bottom: 18px; display: flex; align-items: center; gap: 12px; font-size: 17px; color: #374151; }
-        .feature-list svg { color: var(--secondary); min-width: 24px; }
+        .feature-list { list-style: none; margin: 35px 0; text-align: left; padding: 0 20px; }
+        .feature-list li { margin-bottom: 16px; display: flex; align-items: center; gap: 12px; font-size: 17px; color: #374151; }
+        .feature-list svg { color: var(--secondary); min-width: 24px; height: 24px; }
         
         .btn-buy {
             display: block; width: 100%; background: var(--primary); color: white;
-            padding: 18px; border-radius: 12px; font-size: 18px; font-weight: bold;
+            padding: 20px; border-radius: 12px; font-size: 18px; font-weight: 800;
             text-decoration: none; transition: 0.3s;
         }
         .btn-buy:hover { background: var(--primary-dark); transform: scale(1.02); }
-        .guarantee { margin-top: 20px; font-size: 13px; color: var(--gray); display: flex; align-items: center; justify-content: center; gap: 5px; }
+        .guarantee { margin-top: 20px; font-size: 13px; color: var(--gray); display: flex; align-items: center; justify-content: center; gap: 6px; }
 
-        /* System Requirements & FAQ */
-        .req-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto; }
+        /* FAQ */
         .faq-item { max-width: 800px; margin: 0 auto 20px; background: var(--white); padding: 25px; border-radius: 12px; border: 1px solid #E5E7EB; }
-        .faq-question { font-weight: bold; font-size: 18px; margin-bottom: 8px; color: var(--dark); }
+        .faq-question { font-weight: 700; font-size: 18px; margin-bottom: 8px; color: var(--dark); }
 
         /* Footer */
-        footer { background: var(--dark); color: white; text-align: center; padding: 60px 20px; margin-top: 80px; }
-        footer h2 { margin-bottom: 10px; }
-        footer a { color: #D1D5DB; text-decoration: none; font-size: 14px; margin: 0 12px; transition: 0.3s; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 80px 20px; margin-top: 50px; }
+        footer a { color: #9CA3AF; text-decoration: none; margin: 0 15px; font-size: 14px; transition: 0.3s; }
         footer a:hover { color: var(--white); text-decoration: underline; }
         .footer-links { margin-top: 30px; border-top: 1px solid #374151; padding-top: 30px; }
 
         @media (max-width: 768px) { 
-            .hero h1 { font-size: 36px; } 
+            .hero h1 { font-size: 38px; } 
             .nav-links { display: none; } 
-            .req-grid { grid-template-columns: 1fr; }
-            .pricing-card { padding: 30px 20px; }
+            .pricing-card { padding: 40px 25px; }
+            .hero { padding-top: 120px; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">
-            <img src="logo.png" alt="LipiVoice Logo"> 
+        <a href="#" class="logo">
+            <img src="logo.png" alt="LipiVoice Pro Logo"> 
             LipiVoice Pro
-        </div>
+        </a>
         <div class="nav-links">
             <a href="#features">Features</a>
             <a href="#pricing">Pricing</a>
-            <a href="#requirements">Requirements</a>
+            <a href="#faq">FAQ</a>
             <a href="https://trndggamers-ship-it.github.io/Mika-AI/" target="_blank">Contact</a>
             <a href="https://zerixastudio.gumroad.com/l/eyrsp" class="btn-download" target="_blank">Download v7.0</a>
         </div>
@@ -180,72 +222,71 @@
 
     <section class="hero">
         <h1>Offline AI Transcription <br><span>Secure. Fast. Unlimited.</span></h1>
-        <p>Convert Audio & Video to Text instantly without internet. Privacy-first AI transcription for creators, journalists, and researchers.</p>
+        <p>The #1 Offline Speech-to-Text Software for Windows. Convert unlimited audio & video files securely on your PC. No Monthly Fees. No GPU Required.</p>
         
         <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-            <a href="https://zerixastudio.gumroad.com/l/eyrsp" class="btn-download" style="margin:0; padding: 15px 40px; font-size: 18px;" target="_blank">Get Started - $19</a>
+            <a href="https://zerixastudio.gumroad.com/l/eyrsp" class="btn-download" style="margin:0; padding: 16px 45px; font-size: 18px;" target="_blank">Get Started - $19</a>
             <a href="https://buymeacoffee.com/mika_ai" target="_blank" class="btn-coffee">☕ Support Dev</a>
         </div>
 
         <div class="install-note">
-            <span style="font-size: 20px;">🛡️</span>
+            <span style="font-size: 24px;">🛡️</span>
             <div>
-                <strong>Installation Note:</strong> Windows SmartScreen might flag the setup file as "Unrecognized" (Common for indie apps). 
-                <br>Click <b>"More Info"</b> > <b>"Run Anyway"</b> to install. It is 100% safe.
+                <strong>Installation Note:</strong> Windows SmartScreen might say "Unrecognized App" (Since I am an indie developer). 
+                <br>Click <b>"More Info"</b> > <b>"Run Anyway"</b> to install. It is 100% safe & offline.
             </div>
         </div>
 
         <div class="image-container">
-            <img src="hero-image.png" alt="LipiVoice Pro Interface">
+            <img src="hero-image.png" alt="LipiVoice Pro Software Interface - Dark Mode">
         </div>
     </section>
 
     <section id="features" class="section-padding">
-        <h2 class="section-title">Why LipiVoice Pro?</h2>
+        <h2 class="section-title">Why Creators Love LipiVoice Pro</h2>
         <div class="grid">
             <div class="card">
                 <h3>🚀 Unlimited Batch</h3>
-                <p>Drag and drop hundreds of files at once. The software processes them one by one automatically while you sleep.</p>
+                <p>Have 100 files? No problem. Drag & drop them all. The software processes them automatically one by one while you sleep.</p>
             </div>
             <div class="card">
-                <h3>🔒 100% Offline</h3>
-                <p>Your data never leaves your PC. We use an embedded AI engine that works without internet connection.</p>
+                <h3>🔒 100% Offline Privacy</h3>
+                <p>Your sensitive interviews and data never leave your computer. We use an embedded AI engine that runs locally without internet.</p>
             </div>
             <div class="card">
                 <h3>💻 CPU Optimized</h3>
-                <p>No expensive GPU needed. Our smart engine is optimized to run smoothly on standard Intel/AMD CPUs.</p>
+                <p>Don't have a $1000 GPU? No worries. Our custom-tuned Whisper model runs smoothly on standard Intel/AMD CPUs.</p>
             </div>
             <div class="card">
-                <h3>📝 Multi-Format</h3>
-                <p>Export your transcripts to TXT, SRT (Subtitles), VTT, or JSON with a single click.</p>
+                <h3>📝 Multi-Format Export</h3>
+                <p>Get instant transcripts in SRT (Subtitles), VTT, JSON, or TXT formats ready for YouTube or Premiere Pro.</p>
             </div>
         </div>
     </section>
 
     <section id="pricing" class="section-padding bg-light">
-        <h2 class="section-title">Simple Pricing, Lifetime Value</h2>
+        <h2 class="section-title">One-Time Payment, Lifetime Access</h2>
         
         <div class="pricing-container">
             <div class="pricing-card">
-                <div class="popular-badge">LIFETIME DEAL 🔥</div>
+                <div class="popular-badge">LIMITED TIME DEAL 🔥</div>
                 
-                <h3 style="margin-top: 10px; font-size: 28px;">Lifetime License</h3>
-                <p style="color: #6B7280; margin-top: 5px;">One-time payment. Use forever.</p>
+                <h3 style="margin-top: 15px; font-size: 26px;">Lifetime License</h3>
+                <p style="color: #6B7280; margin-top: 5px;">Own the software forever.</p>
                 
                 <div class="price-area">
                     <span class="old-price">$49</span>
                     <span class="new-price">$19</span>
-                    <span>USD</span>
                 </div>
 
                 <ul class="feature-list">
                     <li>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Unlimited Audio/Video Transcription
+                        Unlimited Offline Transcription
                     </li>
                     <li>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        100% Offline (Privacy Focused)
+                        No Monthly Subscriptions
                     </li>
                     <li>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -257,7 +298,7 @@
                     </li>
                     <li>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Free Future Updates
+                        <b>Free Future Updates</b>
                     </li>
                 </ul>
 
@@ -273,23 +314,23 @@
 
     <section id="requirements" class="section-padding">
         <h2 class="section-title">System Requirements</h2>
-        <div class="req-grid">
+        <div class="grid" style="max-width: 900px; grid-template-columns: 1fr 1fr;">
             <div class="card">
-                <h3>Minimum Requirements</h3>
-                <ul style="padding-left: 20px; margin-top: 15px;">
+                <h3>Minimum</h3>
+                <ul style="padding-left: 20px; margin-top: 15px; line-height: 2;">
                     <li><b>OS:</b> Windows 10 or 11 (64-bit)</li>
-                    <li><b>Processor:</b> Intel Core i3 / AMD Ryzen 3</li>
+                    <li><b>CPU:</b> Intel Core i3 / Ryzen 3</li>
                     <li><b>RAM:</b> 8 GB</li>
-                    <li><b>Storage:</b> 4 GB Free Space</li>
+                    <li><b>Space:</b> 4 GB Free</li>
                 </ul>
             </div>
             <div class="card" style="border-color: var(--primary);">
-                <h3>Recommended Specs</h3>
-                <ul style="padding-left: 20px; margin-top: 15px;">
-                    <li><b>OS:</b> Windows 10 or 11 (64-bit)</li>
-                    <li><b>Processor:</b> Intel Core i5 / Ryzen 5 or better</li>
-                    <li><b>RAM:</b> 16 GB (Faster processing)</li>
-                    <li><b>Storage:</b> SSD Recommended</li>
+                <h3>Recommended</h3>
+                <ul style="padding-left: 20px; margin-top: 15px; line-height: 2;">
+                    <li><b>OS:</b> Windows 10/11 (64-bit)</li>
+                    <li><b>CPU:</b> Intel Core i5 / Ryzen 5</li>
+                    <li><b>RAM:</b> 16 GB (Faster)</li>
+                    <li><b>Space:</b> SSD Recommended</li>
                 </ul>
             </div>
         </div>
@@ -300,33 +341,33 @@
         
         <div class="faq-item">
             <div class="faq-question">Does this software require internet?</div>
-            <div class="faq-answer">No. LipiVoice Pro is 100% offline. All processing happens locally on your computer.</div>
+            <div style="color: #4B5563;">No. LipiVoice Pro is 100% offline. All processing happens locally on your computer. Perfect for privacy.</div>
         </div>
         <div class="faq-item">
             <div class="faq-question">Do I need a powerful GPU?</div>
-            <div class="faq-answer">No. While a GPU makes it faster, our software is specially optimized to run smoothly on standard CPUs.</div>
+            <div style="color: #4B5563;">No. While a GPU makes it faster, our software is specially optimized to run smoothly on standard CPUs (Intel/AMD).</div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">Is it a monthly subscription?</div>
-            <div class="faq-answer">No! You pay once ($19) and own it forever. No hidden fees.</div>
+            <div class="faq-question">How do I get the software after paying?</div>
+            <div style="color: #4B5563;">Immediately after payment on Gumroad, you will get a download link for the setup file.</div>
         </div>
     </section>
 
     <footer>
-        <h2>LipiVoice Pro</h2>
-        <p>Built with ❤️ by Mika-AI (Kazi Abir)</p>
+        <h2 style="font-size: 24px; color: white;">LipiVoice Pro</h2>
+        <p style="color: #9CA3AF; margin-top: 10px;">Empowering creators with offline AI tools.</p>
         
-        <div style="margin: 30px 0;">
+        <div style="margin: 40px 0;">
              <a href="https://buymeacoffee.com/mika_ai" target="_blank" class="btn-coffee">
-                ☕ Donate & Support
+                ☕ Donate & Support Dev
             </a>
         </div>
 
-        <p>&copy; 2026 Kazi Abir. All rights reserved.</p>
+        <p>&copy; 2026 Kazi Abir (Mika-AI). All rights reserved.</p>
         
         <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a> |
-            <a href="terms.html">Terms of Service</a> |
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
             <a href="https://trndggamers-ship-it.github.io/Mika-AI/" target="_blank">Contact Developer</a>
         </div>
     </footer>
