@@ -16,7 +16,7 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
         
-        body { background-color: var হোট; color: var(--dark); line-height: 1.6; }
+        body { background-color: var(--white); color: var(--dark); line-height: 1.6; }
 
         /* Navbar */
         nav {
@@ -73,11 +73,13 @@
         /* Footer */
         footer { background: var(--dark); color: white; text-align: center; padding: 40px; margin-top: 50px; }
         footer p { opacity: 0.7; }
+        footer a { color: #EEF2FF; text-decoration: none; font-weight: bold; }
+        footer a:hover { text-decoration: underline; }
 
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 { font-size: 32px; }
-            .nav-links { display: none; } /* Mobile menu hidden for simplicity */
+            .nav-links { display: none; } 
         }
     </style>
 </head>
@@ -93,8 +95,7 @@
         </div>
         <div class="nav-links">
             <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#contact">Support</a>
+            <a href="https://trndggamers-ship-it.github.io/Mika-AI/" target="_blank">Contact Support</a>
         </div>
         <a href="#" class="btn-download">Download v7.0</a>
     </nav>
@@ -137,7 +138,9 @@
 
     <footer>
         <p>&copy; 2026 LipiVoice Pro. All rights reserved.</p>
-        <p style="font-size: 14px; margin-top: 10px;">Built for Creators, by Creators.</p>
+        <p style="font-size: 14px; margin-top: 10px;">
+            Need Help? <a href="https://trndggamers-ship-it.github.io/Mika-AI/" target="_blank">Chat with us at Mika-AI</a>
+        </p>
     </footer>
 
 </body>
